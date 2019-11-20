@@ -1,6 +1,11 @@
 class Api::ContactsController < ApplicationController
 
   def index
+
+    p "***" * 5
+    p current_user
+    p "***" * 5
+
     @contacts = Contact.all
     render 'index.json.jb'
   end
