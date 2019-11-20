@@ -8,7 +8,9 @@
     middle_name: contact.middle_name,
     lat: contact.lat, 
     lng: contact.lng,
-    user_id: contact.user_id
+    user_id: contact.user_id,
+    phone_number: contact.japanese_phone_number,
+    created_at: contact.friendly_created_at
   }
 
 end
