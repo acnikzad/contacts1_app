@@ -6,7 +6,8 @@
     phone_number: contact.phone_number,
     middle_name: contact.middle_name,
     lat: contact.lat,
-    lng: contact.lng
+    lng: contact.lng,
+    user_id: contact.user_id
 
     # friendly_update_at: contact.friendly_update_at,
     # full_name: contact.full_name

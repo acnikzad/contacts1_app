@@ -7,7 +7,8 @@
     email: contact.email,
     middle_name: contact.middle_name,
     lat: contact.lat, 
-    lng: contact.lng
+    lng: contact.lng,
+    user_id: contact.user_id
   }
 
 end

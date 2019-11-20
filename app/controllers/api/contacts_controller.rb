@@ -20,7 +20,8 @@ class Api::ContactsController < ApplicationController
       phone_number: params[:phone_number],
       middle_name: params[:middle_name],
       lat: params[:lat],
-      lng: params[:lng]
+      lng: params[:lng],
+      user_id: current_user.id
     )
 
 
@@ -28,6 +29,9 @@ class Api::ContactsController < ApplicationController
       @contact.save
    
     render 'show.json.jb'
+    end
+
+
   end
 
   def update
