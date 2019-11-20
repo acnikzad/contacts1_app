@@ -16,7 +16,6 @@ class Api::ContactsController < ApplicationController
   end
 
   def create
-   
     @contact = Contact.new(
    
       first_name: params[:first_name],
@@ -29,15 +28,13 @@ class Api::ContactsController < ApplicationController
       user_id: current_user.id
     )
 
-
-    if first_name == false || last_name == false
-      @contact.save
-   
-    render 'show.json.jb'
+    if @contact.save
+      render 'show.json.jb'
+    else
+      render json: {errors: @contact.errors.full_messages}, status: :unprocessable_entity
     end
-
-
   end
+
 
   def update
     @contact = Contact.find_by(id: params[:id])
@@ -63,3 +60,7 @@ class Api::ContactsController < ApplicationController
 
 end
 
+    # address = params[:address]
+    # coordinates = Geocoder.coordinates(address)
+    # latitude = coordinates[0]
+    # longitude = coordinates[1]
